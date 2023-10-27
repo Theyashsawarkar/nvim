@@ -8,6 +8,7 @@ map("n", "<leader>wh", "<C-w>h", { desc = "Go to left window", remap = true })
 map("n", "<leader>wl", "<C-w>l", { desc = "Go to right window", remap = true })
 map("n", "<leader>wk", "<C-w>k", { desc = "Go to upper window", remap = true })
 map("n", "<leader>wj", "<C-w>j", { desc = "Go to lower window", remap = true })
+
 local neotree_keybindings = {
 	{
 		mode = "n",
