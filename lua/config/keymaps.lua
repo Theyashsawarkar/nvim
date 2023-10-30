@@ -10,19 +10,19 @@ map("n", "<leader>wk", "<C-w>k", { desc = "Go to upper window", remap = true })
 map("n", "<leader>wj", "<C-w>j", { desc = "Go to lower window", remap = true })
 
 local neotree_keybindings = {
-	{
-		mode = "n",
-		keys = "h",
-		command = function()
-			local bufnr = vim.fn.bufnr("%")
-			if vim.fn.getbufvar(bufnr, "&filetype") == "NvimTree" then
-				require("neo-tree.command").execute({ toggle_hidden = true })
-			else
-				vim.fn.feedkeys("h", "n")
-			end
-		end,
-		desc = "Toggle Hidden Files",
-	},
+  {
+    mode = "n",
+    keys = "h",
+    command = function()
+      local bufnr = vim.fn.bufnr("%")
+      if vim.fn.getbufvar(bufnr, "&filetype") == "NvimTree" then
+        require("neo-tree.command").execute({ toggle_hidden = true })
+      else
+        vim.fn.feedkeys("h", "n")
+      end
+    end,
+    desc = "Toggle Hidden Files",
+  },
 }
 
 return neotree_keybindings

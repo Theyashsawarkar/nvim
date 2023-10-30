@@ -6,8 +6,4 @@ debug
 foo.*
 *.log
 data
-*.out
 *.json
-lazy-lock.json
-lazyvim.json
-.gitignore
