@@ -1,9 +1,15 @@
 --NOTE:-
 --      uncomment the below lines in function to make onedark default theme
+--      but then transparent_background wont work
 
 return {
   {
     "navarasu/onedark.nvim",
+    opts = function()
+      return {
+        transparent = true,
+      }
+    end,
     -- config = function()
     --   vim.cmd("colorscheme onedark")
     -- end,
