@@ -3,17 +3,14 @@
 --      but then transparent_background wont work
 
 return {
-  {
-    "navarasu/onedark.nvim",
-    opts = function()
-      return {
-        transparent = true,
-      }
-    end,
-    -- config = function()
-    --   vim.cmd("colorscheme onedark")
-    -- end,
-    -- -- run = "make", -- Optional: Run a command after the plugin is installed
-    -- priority = 1000, -- Set a high priority for this plugin
-  },
+    {
+        "navarasu/onedark.nvim",
+        config = function()
+            require("onedark").setup({
+                transparent = true, -- Making it transparent
+            })
+            vim.cmd("colorscheme onedark") -- Setting onedark as the colorscheme
+        end,
+        priority = 10000, -- Set a high priority for this plugin
+    },
 }
